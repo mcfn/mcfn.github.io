@@ -3,22 +3,22 @@
   
   
   <url>
-    <loc>http://yoursite.com/blog/2014/07/25/hello/</loc>
+    <loc>http://mcfeng.me/blog/2014/07/25/hello/</loc>
     <lastmod>2014-07-25T01:05:57+09:00</lastmod>
     <priority>0.8</priority>
   </url>
   
   
   <url>
-    <loc>http://yoursite.com/blog/archives/</loc>
-    <lastmod>2014-07-25T01:19:11+09:00</lastmod>
+    <loc>http://mcfeng.me/blog/archives/</loc>
+    <lastmod>2014-07-27T22:38:33+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/</loc>
-    <lastmod>2014-07-25T01:19:11+09:00</lastmod>
+    <loc>http://mcfeng.me/</loc>
+    <lastmod>2014-07-27T22:38:33+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
