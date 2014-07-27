@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://mcfn.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://mcfeng.me
+title: Think about 7
+subtitle: Interesting imagination, elegant solution.
+author: McFn Feng
 simple_search: https://www.google.com/search
 description:
 
