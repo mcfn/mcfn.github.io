@@ -9,9 +9,9 @@
   <meta name="author" content="McFn Feng">
 
   
-  <meta name="description" content="无论在哪个时空，希望阳光依旧温暖。 也许，我会开始对猫星人有一点喜爱吧。 &ndash;&lt;陽だまりの彼女> &lt;细水长流> 若你双眼是深海，你已经浸没我
-谁令我现能去爱，你已否知道么 我感激我们遇见，在今生像河与海 你那臂弯溶汇结合我，盛我在内
-若有天要被分开，我远山也踏破 &hellip;">
+  <meta name="description" content="Objective c的switch中的错误信息： 1
+Expected expression 在Objective c中，如果需要在switch语句中声明变量，需要将相关代码放在{}，否编译会报错。
+原因是在ARC（Automatic Reference Counting）时候，如果没有加{}， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,89 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/08/06/ios-switch-scope/">[IOS] Switch Scope</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-06T23:48:35+09:00" pubdate data-updated="true">Aug 6<sup>th</sup>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Objective c的switch中的错误信息：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Expected expression</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在Objective c中，如果需要在switch语句中声明变量，需要将相关代码放在{}，否编译会报错。<br/>
+原因是在ARC（Automatic Reference Counting）时候，如果没有加{}，编译器不能确定这个变量的作用域。</p>
+
+<p>所以需要加入{}，声明变量作用域。</p>
+
+<p>下面，case1是会报错，case2可以通过。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>switch(condition) {
+</span><span class='line'>    case 1:
+</span><span class='line'>        // error
+</span><span class='line'>        int a = 1;
+</span><span class='line'>        NSLog(@"a: %d", a);
+</span><span class='line'>        break;
+</span><span class='line'>    case 2:
+</span><span class='line'>    {
+</span><span class='line'>        int b = 1;
+</span><span class='line'>        NSLog(@"b: %d", b);
+</span><span class='line'>        break;
+</span><span class='line'>    }
+</span><span class='line'>    default:
+</span><span class='line'>        break;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Reference</h2>
+
+<p><a href="http://stackoverflow.com/questions/7562199/when-converting-a-project-to-use-arc-what-does-switch-case-is-in-protected-scop">stackoverflow:When converting a project to use ARC what does “switch case is in protected scope” mean?</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -271,6 +354,10 @@ Maybe it just because I’m too lazy.</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/06/ios-switch-scope/">[IOS] Switch Scope</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/04/20/missing-you/">Missing You</a>

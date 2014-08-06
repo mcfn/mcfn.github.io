@@ -5,14 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>花見 - Think about 7</title>
+  <title>[IOS] Switch Scope - Think about 7</title>
   <meta name="author" content="McFn Feng">
 
   
-  <meta name="description" content="超市回来的路上，路过吸烟区，一个男子，靠着围栏抽烟，戴着耳机。
-在想，其实，可能他并没有在听什么，只是这样一个姿态而已。 一直想象过这样一个场景。
-咖啡店外的街道，落地的窗户，一个女孩驻足凝望店内。
-其实她只是看到自己的影子。尽管里面的人看到的，也许是一个陌生人的疲惫。 最近一直在想，曾经一段时间 &hellip;">
+  <meta name="description" content="Objective c的switch中的错误信息： 1
+Expected expression 在Objective c中，如果需要在switch语句中声明变量，需要将相关代码放在{}，否编译会报错。
+原因是在ARC（Automatic Reference Counting）时候，如果没有加{}， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mcfeng.me/blog/2014/03/29/blog-post">
+  <link rel="canonical" href="http://mcfeng.me/blog/2014/08/06/ios-switch-scope">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Think about 7" type="application/atom+xml">
@@ -83,7 +82,7 @@
   
   <header>
     
-      <h1 class="entry-title">花見</h1>
+      <h1 class="entry-title">[IOS] Switch Scope</h1>
     
     
       <p class="meta">
@@ -99,48 +98,61 @@
   
 
 
-<time datetime="2014-03-29T00:00:00+09:00" pubdate data-updated="true">Mar 29<sup>th</sup>, 2014</time>
+<time datetime="2014-08-06T23:48:35+09:00" pubdate data-updated="true">Aug 6<sup>th</sup>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>超市回来的路上，路过吸烟区，一个男子，靠着围栏抽烟，戴着耳机。
-在想，其实，可能他并没有在听什么，只是这样一个姿态而已。</p>
+<div class="entry-content"><p>Objective c的switch中的错误信息：</p>
 
-<p>一直想象过这样一个场景。
-咖啡店外的街道，落地的窗户，一个女孩驻足凝望店内。
-其实她只是看到自己的影子。尽管里面的人看到的，也许是一个陌生人的疲惫。</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Expected expression</span></code></pre></td></tr></table></div></figure>
 
-<p>最近一直在想，曾经一段时间，很想把别人的都看透，
-想知道在想什么，想知道如何思考，想知道很多很多。</p>
 
-<p>想起诚实，有时候，觉得自己对每个人都诚实，就是对彼此最好的态度。</p>
+<p>在Objective c中，如果需要在switch语句中声明变量，需要将相关代码放在{}，否编译会报错。<br/>
+原因是在ARC（Automatic Reference Counting）时候，如果没有加{}，编译器不能确定这个变量的作用域。</p>
 
-<p>诚实和看透。往往事与愿违。</p>
+<p>所以需要加入{}，声明变量作用域。</p>
 
-<p>一个人可以保持对外的谦逊和气度，但是往往也有不为人知的一面。
-有时候不知道哪个，才是真实的自己。有时候往往真实也没有那么重要。</p>
+<p>下面，case1是会报错，case2可以通过。</p>
 
-<p>没有必要追求太苛刻的真实，愿意，就选择相信。</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>switch(condition) {
+</span><span class='line'>    case 1:
+</span><span class='line'>        // error
+</span><span class='line'>        int a = 1;
+</span><span class='line'>        NSLog(@"a: %d", a);
+</span><span class='line'>        break;
+</span><span class='line'>    case 2:
+</span><span class='line'>    {
+</span><span class='line'>        int b = 1;
+</span><span class='line'>        NSLog(@"b: %d", b);
+</span><span class='line'>        break;
+</span><span class='line'>    }
+</span><span class='line'>    default:
+</span><span class='line'>        break;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
-<p>今天去了樱花。
-才知道，其实开花到花谢，只有那么短短的几天。
-没有想象中的震撼。觉得动漫，电影，小说中都将作者对樱花的所有美丽都描写殆尽了。
-反而真正站在树下，近在咫尺的时候，需要自己脑海再进行二次创作。</p>
 
-<p>其实，本来，动漫，电影，小说，不都是作者的二次创作么。
-我们会为一个人的思想牵引，也许并不是因为这个风景有多么美好，而是观看这个风景的那份心情所感动。
-我们会为一个爱情所动然，并不是爱情本身多么美好，而是参与其中的那份心意和感觉本身就无法替代。</p>
+<h2>Reference</h2>
 
-<p>往往不见得需要多么惊天动地，海枯石烂。体会到了，就能感受到左心房的触动。</p>
-
-<p>最近，就被一个游戏感动到。开始让我思考很多很多，思考，真的觉得是很漫长的时间了，距离前一次。</p>
-
-<p>“即使是时间，也有不能改变的所在。”昨晚临睡，给自己的话。</p>
-
-<p>以上。</p>
+<p><a href="http://stackoverflow.com/questions/7562199/when-converting-a-project-to-use-arc-what-does-switch-case-is-in-protected-scop">stackoverflow:When converting a project to use ARC what does “switch case is in protected scope” mean?</a></p>
 </div>
 
 
@@ -163,8 +175,14 @@
   
 
 
-<time datetime="2014-03-29T00:00:00+09:00" pubdate data-updated="true">Mar 29<sup>th</sup>, 2014</time>
+<time datetime="2014-08-06T23:48:35+09:00" pubdate data-updated="true">Aug 6<sup>th</sup>, 2014</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/objective-c/'>objective-c</a>
+  
+</span>
 
 
     </p>
@@ -227,10 +245,8 @@ var jiathis_config={
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/02/27/refreshing-and-moving-on/" title="Previous Post: Refreshing and moving on">&laquo; Refreshing and moving on</a>
+        <a class="basic-alignment left" href="/blog/2014/04/20/missing-you/" title="Previous Post: Missing you">&laquo; Missing you</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/04/20/missing-you/" title="Next Post: Missing you">Missing you &raquo;</a>
       
     </p>
   </footer>
@@ -292,8 +308,8 @@ var jiathis_config={
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mcfeng.me/blog/2014/03/29/blog-post/';
-        var disqus_url = 'http://mcfeng.me/blog/2014/03/29/blog-post/';
+        var disqus_identifier = 'http://mcfeng.me/blog/2014/08/06/ios-switch-scope/';
+        var disqus_url = 'http://mcfeng.me/blog/2014/08/06/ios-switch-scope/';
         var disqus_script = 'embed.js';
       
     (function () {

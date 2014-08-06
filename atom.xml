@@ -4,7 +4,7 @@
   <title><![CDATA[Think about 7]]></title>
   <link href="http://mcfeng.me/atom.xml" rel="self"/>
   <link href="http://mcfeng.me/"/>
-  <updated>2014-07-28T00:55:42+09:00</updated>
+  <updated>2014-08-07T00:12:29+09:00</updated>
   <id>http://mcfeng.me/</id>
   <author>
     <name><![CDATA[McFn Feng]]></name>
@@ -12,6 +12,62 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[IOS] Switch Scope]]></title>
+    <link href="http://mcfeng.me/blog/2014/08/06/ios-switch-scope/"/>
+    <updated>2014-08-06T23:48:35+09:00</updated>
+    <id>http://mcfeng.me/blog/2014/08/06/ios-switch-scope</id>
+    <content type="html"><![CDATA[<p>Objective c的switch中的错误信息：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Expected expression</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在Objective c中，如果需要在switch语句中声明变量，需要将相关代码放在{}，否编译会报错。<br/>
+原因是在ARC（Automatic Reference Counting）时候，如果没有加{}，编译器不能确定这个变量的作用域。</p>
+
+<p>所以需要加入{}，声明变量作用域。</p>
+
+<p>下面，case1是会报错，case2可以通过。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>switch(condition) {
+</span><span class='line'>    case 1:
+</span><span class='line'>        // error
+</span><span class='line'>        int a = 1;
+</span><span class='line'>        NSLog(@"a: %d", a);
+</span><span class='line'>        break;
+</span><span class='line'>    case 2:
+</span><span class='line'>    {
+</span><span class='line'>        int b = 1;
+</span><span class='line'>        NSLog(@"b: %d", b);
+</span><span class='line'>        break;
+</span><span class='line'>    }
+</span><span class='line'>    default:
+</span><span class='line'>        break;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Reference</h2>
+
+<p><a href="http://stackoverflow.com/questions/7562199/when-converting-a-project-to-use-arc-what-does-switch-case-is-in-protected-scop">stackoverflow:When converting a project to use ARC what does “switch case is in protected scope” mean?</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Missing You]]></title>
