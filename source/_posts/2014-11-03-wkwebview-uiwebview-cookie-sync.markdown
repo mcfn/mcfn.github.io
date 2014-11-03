@@ -3,7 +3,7 @@ layout: post
 title: "WKWebView和UIWebView之间的cookie共享"
 date: 2014-11-03 23:52:27 +0900
 comments: true
-categories: iOS WKWebView UIWebView Cookie
+categories: iOS WKWebView UIWebView
 ---
 
 
