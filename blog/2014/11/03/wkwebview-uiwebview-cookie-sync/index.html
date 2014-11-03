@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Think about 7</title>
+  <title>WKWebView和UIWebView之间的cookie共享 - Think about 7</title>
   <meta name="author" content="McFn Feng">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mcfeng.me">
+  <link rel="canonical" href="http://mcfeng.me/blog/2014/11/03/wkwebview-uiwebview-cookie-sync">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Think about 7" type="application/atom+xml">
@@ -75,15 +75,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/11/03/wkwebview-uiwebview-cookie-sync/">WKWebView和UIWebView之间的cookie共享</a></h1>
+      <h1 class="entry-title">WKWebView和UIWebView之间的cookie共享</h1>
     
     
       <p class="meta">
@@ -106,7 +103,7 @@
   </header>
 
 
-  <div class="entry-content"><h2>前言</h2>
+<div class="entry-content"><h2>前言</h2>
 
 <p>本文主要讨论一下，如何在iOS的UIWebView以及WKWebView之间进行cookie的同步。</p>
 
@@ -217,105 +214,16 @@ NSHTTPCookieStorage中。同时，如果在http response中，对cookie进行更
 </ul>
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/06/ios-switch-scope/">[IOS] Switch Scope</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">McFn Feng</span></span>
 
-<time datetime="2014-08-06T23:48:35+09:00" pubdate data-updated="true">Aug 6<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Objective c的switch中的错误信息：</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Expected expression</span></code></pre></td></tr></table></div></figure>
-
-
-<p>在Objective c中，如果需要在switch语句中声明变量，需要将相关代码放在{}，否编译会报错。<br/>
-原因是在ARC（Automatic Reference Counting）时候，如果没有加{}，编译器不能确定这个变量的作用域。</p>
-
-<p>所以需要加入{}，声明变量作用域。</p>
-
-<p>下面，case1是会报错，case2可以通过。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>switch(condition) {
-</span><span class='line'>    case 1:
-</span><span class='line'>        // error
-</span><span class='line'>        int a = 1;
-</span><span class='line'>        NSLog(@"a: %d", a);
-</span><span class='line'>        break;
-</span><span class='line'>    case 2:
-</span><span class='line'>    {
-</span><span class='line'>        int b = 1;
-</span><span class='line'>        NSLog(@"b: %d", b);
-</span><span class='line'>        break;
-</span><span class='line'>    }
-</span><span class='line'>    default:
-</span><span class='line'>        break;
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Reference</h2>
-
-<p><a href="http://stackoverflow.com/questions/7562199/when-converting-a-project-to-use-arc-what-does-switch-case-is-in-protected-scop">stackoverflow:When converting a project to use ARC what does “switch case is in protected scope” mean?</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/20/missing-you/">Missing You</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -327,171 +235,91 @@ NSHTTPCookieStorage中。同时，如果在http response中，对cookie进行更
   
 
 
-<time datetime="2014-04-20T00:00:00+09:00" pubdate data-updated="true">Apr 20<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>无论在哪个时空，希望阳光依旧温暖。</p>
-
-<p>也许，我会开始对猫星人有一点喜爱吧。</p>
-
-<p>&ndash;&lt;陽だまりの彼女></p>
-
-<p><img src="/images/post/IMG_0020.JPG">
-<img src="/images/post/IMG_0023.JPG"></p>
-
-<p>&lt;细水长流></p>
-
-<p>若你双眼是深海，你已经浸没我<br/>
-谁令我现能去爱，你已否知道么  <br/>
-我感激我们遇见，在今生像河与海 <br/>
-你那臂弯溶汇结合我，盛我在内<br/>
-若有天要被分开，我远山也踏破<br/>
-寻办法又流向你，你会否等我么<br/>
-你可知每凝望你，便仿佛像河看海<br/>
-你那暗涌如在叫唤我，唤我入内<br/>
-怎可不奔向你</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+<time datetime="2014-11-03T23:52:27+09:00" pubdate data-updated="true">Nov 3<sup>rd</sup>, 2014</time>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/29/blog-post/">花見</a></h1>
-    
-    
-      <p class="meta">
-        
 
-
-
-
-
-
-
-
+<span class="categories">
   
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/uiwebview/'>uiwebview</a>, <a class='category' href='/blog/categories/wkwebview/'>wkwebview</a>
+  
+</span>
 
 
-<time datetime="2014-03-29T00:00:00+09:00" pubdate data-updated="true">Mar 29<sup>th</sup>, 2014</time>
-        
-      </p>
+    </p>
     
-  </header>
+      <div class="sharing">
+  
+  
+  
+  
+  <!-- JiaThis Button BEGIN -->
+<style>
+    .flash-video{display:none;}
+</style>
+<!-- JiaThis Button BEGIN -->
+<div id="ckepop">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_tsina">新浪微博</a>
+<a class="jiathis_button_t163">网易微博</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_renren">人人网</a>
+<a class="jiathis_button_douban">豆瓣</a>
 
-
-  <div class="entry-content"><p>超市回来的路上，路过吸烟区，一个男子，靠着围栏抽烟，戴着耳机。
-在想，其实，可能他并没有在听什么，只是这样一个姿态而已。</p>
-
-<p>一直想象过这样一个场景。
-咖啡店外的街道，落地的窗户，一个女孩驻足凝望店内。
-其实她只是看到自己的影子。尽管里面的人看到的，也许是一个陌生人的疲惫。</p>
-
-<p>最近一直在想，曾经一段时间，很想把别人的都看透，
-想知道在想什么，想知道如何思考，想知道很多很多。</p>
-
-<p>想起诚实，有时候，觉得自己对每个人都诚实，就是对彼此最好的态度。</p>
-
-<p>诚实和看透。往往事与愿违。</p>
-
-<p>一个人可以保持对外的谦逊和气度，但是往往也有不为人知的一面。
-有时候不知道哪个，才是真实的自己。有时候往往真实也没有那么重要。</p>
-
-<p>没有必要追求太苛刻的真实，愿意，就选择相信。</p>
-
-<p>今天去了樱花。
-才知道，其实开花到花谢，只有那么短短的几天。
-没有想象中的震撼。觉得动漫，电影，小说中都将作者对樱花的所有美丽都描写殆尽了。
-反而真正站在树下，近在咫尺的时候，需要自己脑海再进行二次创作。</p>
-
-<p>其实，本来，动漫，电影，小说，不都是作者的二次创作么。
-我们会为一个人的思想牵引，也许并不是因为这个风景有多么美好，而是观看这个风景的那份心情所感动。
-我们会为一个爱情所动然，并不是爱情本身多么美好，而是参与其中的那份心意和感觉本身就无法替代。</p>
-
-<p>往往不见得需要多么惊天动地，海枯石烂。体会到了，就能感受到左心房的触动。</p>
-
-<p>最近，就被一个游戏感动到。开始让我思考很多很多，思考，真的觉得是很漫长的时间了，距离前一次。</p>
-
-<p>“即使是时间，也有不能改变的所在。”昨晚临睡，给自己的话。</p>
-
-<p>以上。</p>
+<a href="http://www.jiathis.com/share?uid=1952589" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
 </div>
-  
-  
+<script type="text/javascript" >
+var jiathis_config={
+    data_track_clickback:true,
+    sm:"t163,tsina,tqq,renren,douban",
+    summary:"",
+    hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1352295270002550" charset="utf-8"></script>
+<!-- JiaThis Button END -->
 
+<br/>
 
-    </article>
-  
-  
-    <article>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'mcfeng'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+    
+
+    
+	
+</div>
+
+    
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/02/27/refreshing-and-moving-on/">Refreshing and Moving On</a></h1>
-    
-    
-      <p class="meta">
-        
+        <a class="basic-alignment left" href="/blog/2014/08/06/ios-switch-scope/" title="Previous Post: [IOS] Switch scope">&laquo; [IOS] Switch scope</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-27T00:00:00+09:00" pubdate data-updated="true">Feb 27<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Bootcamp in new company is over.
-Now working in new team, focus on APP and SDK development.</p>
-
-<p>I think I’ve been a little more lazy these days. Especially the last day in the bootcamp times.
-But now, it seems that I’ll have more time to being arranged in the coming months..</p>
-
-<p>Maybe, I should get some fun in learning and working on new APPS.</p>
-
-<p>Anyway, these days, I’m thinking about the time in the college.
-I almost spend all of my last 4 years in internship.
-Meet many nice people, some cool and awful codings.
-And the time when I and our team working on ICPC.</p>
-
-<p>It seems that I almost have no time to write somethings, or summarise somethings.
-Maybe it just because I’m too lazy.</p>
-
-<p>I think I can start from now, the ending of the bootcamp, refreshing and moving on.</p>
-
-<p>// Start writing in english, just to keep and practice my english when I staying in Japan.<br/>
-// of cause, my Japanese is much more terrible…</p>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  
-  
+  </section>
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -528,6 +356,7 @@ Maybe it just because I’m too lazy.</p>
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -542,7 +371,10 @@ Maybe it just because I’m too lazy.</p>
       var disqus_shortname = 'mcfeng';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mcfeng.me/blog/2014/11/03/wkwebview-uiwebview-cookie-sync/';
+        var disqus_url = 'http://mcfeng.me/blog/2014/11/03/wkwebview-uiwebview-cookie-sync/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

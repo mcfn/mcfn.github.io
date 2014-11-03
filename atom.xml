@@ -1,112 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Think about 7</title>
-  <meta name="author" content="McFn Feng">
-
-  
-  <meta name="description" content="前言 本文主要讨论一下，如何在iOS的UIWebView以及WKWebView之间进行cookie的同步。 为什么要做Cookie同步 最近在给公司游戏平台开发一个SDK，我主要负责了iOS版本的一部分。 需要给开发者提供UIWebView和WKWebView， &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://mcfeng.me">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Think about 7" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<!--<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"> -->
-
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-53248821-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Think about 7</a></h1>
-  
-    <h2>Interesting imagination, elegant solution.</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:mcfeng.me" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[Think about 7]]></title>
+  <link href="http://mcfeng.me/atom.xml" rel="self"/>
+  <link href="http://mcfeng.me/"/>
+  <updated>2014-11-04T00:44:19+09:00</updated>
+  <id>http://mcfeng.me/</id>
+  <author>
+    <name><![CDATA[McFn Feng]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2014/11/03/wkwebview-uiwebview-cookie-sync/">WKWebView和UIWebView之间的cookie共享</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2014-11-03T23:52:27+09:00" pubdate data-updated="true">Nov 3<sup>rd</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>前言</h2>
+  <entry>
+    <title type="html"><![CDATA[WKWebView和UIWebView之间的cookie共享]]></title>
+    <link href="http://mcfeng.me/blog/2014/11/03/wkwebview-uiwebview-cookie-sync/"/>
+    <updated>2014-11-03T23:52:27+09:00</updated>
+    <id>http://mcfeng.me/blog/2014/11/03/wkwebview-uiwebview-cookie-sync</id>
+    <content type="html"><![CDATA[<h2>前言</h2>
 
 <p>本文主要讨论一下，如何在iOS的UIWebView以及WKWebView之间进行cookie的同步。</p>
 
@@ -216,42 +128,15 @@ NSHTTPCookieStorage中。同时，如果在http response中，对cookie进行更
 <li><a href="http://stackoverflow.com/questions/24464397/how-can-i-retrieve-a-file-using-WKWebView">http://stackoverflow.com/questions/24464397/how-can-i-retrieve-a-file-using-WKWebView</a></li>
 </ul>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/06/ios-switch-scope/">[IOS] Switch Scope</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-06T23:48:35+09:00" pubdate data-updated="true">Aug 6<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Objective c的switch中的错误信息：</p>
+  <entry>
+    <title type="html"><![CDATA[[IOS] Switch Scope]]></title>
+    <link href="http://mcfeng.me/blog/2014/08/06/ios-switch-scope/"/>
+    <updated>2014-08-06T23:48:35+09:00</updated>
+    <id>http://mcfeng.me/blog/2014/08/06/ios-switch-scope</id>
+    <content type="html"><![CDATA[<p>Objective c的switch中的错误信息：</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>Expected expression</span></code></pre></td></tr></table></div></figure>
@@ -299,49 +184,22 @@ NSHTTPCookieStorage中。同时，如果在http response中，对cookie进行更
 <h2>Reference</h2>
 
 <p><a href="http://stackoverflow.com/questions/7562199/when-converting-a-project-to-use-arc-what-does-switch-case-is-in-protected-scop">stackoverflow:When converting a project to use ARC what does “switch case is in protected scope” mean?</a></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/20/missing-you/">Missing You</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-20T00:00:00+09:00" pubdate data-updated="true">Apr 20<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>无论在哪个时空，希望阳光依旧温暖。</p>
+  <entry>
+    <title type="html"><![CDATA[Missing You]]></title>
+    <link href="http://mcfeng.me/blog/2014/04/20/missing-you/"/>
+    <updated>2014-04-20T00:00:00+09:00</updated>
+    <id>http://mcfeng.me/blog/2014/04/20/missing-you</id>
+    <content type="html"><![CDATA[<p>无论在哪个时空，希望阳光依旧温暖。</p>
 
 <p>也许，我会开始对猫星人有一点喜爱吧。</p>
 
 <p>&ndash;&lt;陽だまりの彼女></p>
 
-<p><img src="/images/post/IMG_0020.JPG">
-<img src="/images/post/IMG_0023.JPG"></p>
+<p><img src="http://mcfeng.me/images/post/IMG_0020.JPG">
+<img src="http://mcfeng.me/images/post/IMG_0023.JPG"></p>
 
 <p>&lt;细水长流></p>
 
@@ -354,42 +212,15 @@ NSHTTPCookieStorage中。同时，如果在http response中，对cookie进行更
 你可知每凝望你，便仿佛像河看海<br/>
 你那暗涌如在叫唤我，唤我入内<br/>
 怎可不奔向你</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/29/blog-post/">花見</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-29T00:00:00+09:00" pubdate data-updated="true">Mar 29<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>超市回来的路上，路过吸烟区，一个男子，靠着围栏抽烟，戴着耳机。
+  <entry>
+    <title type="html"><![CDATA[花見]]></title>
+    <link href="http://mcfeng.me/blog/2014/03/29/blog-post/"/>
+    <updated>2014-03-29T00:00:00+09:00</updated>
+    <id>http://mcfeng.me/blog/2014/03/29/blog-post</id>
+    <content type="html"><![CDATA[<p>超市回来的路上，路过吸烟区，一个男子，靠着围栏抽烟，戴着耳机。
 在想，其实，可能他并没有在听什么，只是这样一个姿态而已。</p>
 
 <p>一直想象过这样一个场景。
@@ -424,42 +255,15 @@ NSHTTPCookieStorage中。同时，如果在http response中，对cookie进行更
 <p>“即使是时间，也有不能改变的所在。”昨晚临睡，给自己的话。</p>
 
 <p>以上。</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/02/27/refreshing-and-moving-on/">Refreshing and Moving On</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-27T00:00:00+09:00" pubdate data-updated="true">Feb 27<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Bootcamp in new company is over.
+  <entry>
+    <title type="html"><![CDATA[Refreshing and Moving On]]></title>
+    <link href="http://mcfeng.me/blog/2014/02/27/refreshing-and-moving-on/"/>
+    <updated>2014-02-27T00:00:00+09:00</updated>
+    <id>http://mcfeng.me/blog/2014/02/27/refreshing-and-moving-on</id>
+    <content type="html"><![CDATA[<p>Bootcamp in new company is over.
 Now working in new team, focus on APP and SDK development.</p>
 
 <p>I think I’ve been a little more lazy these days. Especially the last day in the bootcamp times.
@@ -479,87 +283,7 @@ Maybe it just because I’m too lazy.</p>
 
 <p>// Start writing in english, just to keep and practice my english when I staying in Japan.<br/>
 // of cause, my Japanese is much more terrible…</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2014/11/03/wkwebview-uiwebview-cookie-sync/">WKWebView和UIWebView之间的cookie共享</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/08/06/ios-switch-scope/">[IOS] Switch Scope</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/20/missing-you/">Missing You</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/29/blog-post/">花見</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/02/27/refreshing-and-moving-on/">Refreshing and Moving On</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - McFn Feng -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-<script type="text/javascript">
-      var disqus_shortname = 'mcfeng';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
+</feed>

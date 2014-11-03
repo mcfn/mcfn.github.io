@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Objective-c | Think about 7]]></title>
+  <link href="http://mcfeng.me/blog/categories/objective-c/atom.xml" rel="self"/>
+  <link href="http://mcfeng.me/"/>
+  <updated>2014-11-04T00:44:19+09:00</updated>
+  <id>http://mcfeng.me/</id>
+  <author>
+    <name><![CDATA[McFn Feng]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[IOS] Switch Scope]]></title>
+    <link href="http://mcfeng.me/blog/2014/08/06/ios-switch-scope/"/>
+    <updated>2014-08-06T23:48:35+09:00</updated>
+    <id>http://mcfeng.me/blog/2014/08/06/ios-switch-scope</id>
+    <content type="html"><![CDATA[<p>Objective c的switch中的错误信息：
+<code>
+Expected expression
+</code></p>
+
+<p>在Objective c中，如果需要在switch语句中声明变量，需要将相关代码放在{}，否编译会报错。<br/>
+原因是在ARC（Automatic Reference Counting）时候，如果没有加{}，编译器不能确定这个变量的作用域。</p>
+
+<p>所以需要加入{}，声明变量作用域。</p>
+
+<p>下面，case1是会报错，case2可以通过。
+```
+switch(condition) {</p>
+
+<pre><code>case 1:
+    // error
+    int a = 1;
+    NSLog(@"a: %d", a);
+    break;
+case 2:
+{
+    int b = 1;
+    NSLog(@"b: %d", b);
+    break;
+}
+default:
+    break;
+</code></pre>
+
+<p>}
+```</p>
+
+<h2>Reference</h2>
+
+<p><a href="http://stackoverflow.com/questions/7562199/when-converting-a-project-to-use-arc-what-does-switch-case-is-in-protected-scop">stackoverflow:When converting a project to use ARC what does “switch case is in protected scope” mean?</a></p>
+]]></content>
+  </entry>
+  
+</feed>
